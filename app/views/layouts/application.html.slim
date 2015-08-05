@@ -8,8 +8,30 @@ html
     = csrf_meta_tags
 
   body
-  	nav.navbar.navbar-inverse
+  	nav.navbar.navbar-default
   		.container
   			= link_to 'Post App', root_path, :class => "navbar-brand"
+  			p.navbar-text.navbar-right
+  				- if user_signed_in?
+  					| Welcome 
+  					= current_user.email
+  					| &nbsp &nbsp
+  					= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-default"
+  				- else
+  					= link_to "Sign in", new_user_session_path, class: "btn btn-default"
+  					| &nbsp &nbsp
+  					= link_to "Sign up", new_user_registration_path, class: "btn btn-default"
+  	.div
+	  	- if !alert.nil?
+		  	.alert.alert-warning.alert-dismissible role="alert"
+		  		button.close aria-label="Close" data-dismiss="alert" type="button"
+		  			span aria-hidden="true"  &times;
+		  		strong = alert
+		.div
+		  - if !notice.nil?
+		  	.alert.alert-warning.alert-dismissible role="alert"
+		  		button.close aria-label="Close" data-dismiss="alert" type="button"
+		  			span aria-hidden="true"  &times;
+		  		strong = notice
   	.container
     	= yield

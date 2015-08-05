@@ -36,15 +36,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid', '~> 4.0.2'
 gem 'bson_ext'
 
-#use slim for html template
+# use slim for html template
 gem "slim-rails"
 
-#bootstarp for frontend css framework
+# bootstarp for frontend css framework
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
 
+# Use authentication and authorization
+gem 'devise'
+
 group :development, :test do
+	# handling the error
+	gem "better_errors"
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
