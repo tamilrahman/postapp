@@ -47,6 +47,8 @@ gem "less-rails"
 # Use authentication and authorization
 gem 'devise'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
 	# handling the error
 	gem "better_errors"
