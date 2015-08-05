@@ -14,7 +14,7 @@ html
   			p.navbar-text.navbar-right
   				- if user_signed_in?
   					| Welcome 
-  					= current_user.email
+  					b = current_user.name.capitalize
   					| &nbsp &nbsp
   					= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-default"
   				- else
