@@ -96,6 +96,8 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
+    mongo (2.0.6)
+      bson (~> 3.0)
     mongoid (4.0.2)
       activemodel (~> 4.0)
       moped (~> 2.0.0)
@@ -213,6 +215,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  mongo
   mongoid (~> 4.0.2)
   rails (= 4.2.3)
   rails_12factor

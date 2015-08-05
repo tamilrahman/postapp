@@ -46,8 +46,10 @@ gem "less-rails"
 
 # Use authentication and authorization
 gem 'devise'
-
-gem 'rails_12factor', group: :production
+group :production do
+	gem 'rails_12factor'
+	gem 'mongo'
+end
 
 group :development, :test do
 	# handling the error
