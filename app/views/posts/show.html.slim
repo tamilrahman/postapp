@@ -1,15 +1,15 @@
-.row
-	.well
-		.col-md-12
-	  	strong Title:
-	  	br
-	 		= @post.title
-	 	.col-md-12
-	  	strong Description:
-	  	br
-	  	= @post.description
-	  	br
-	  	br
-			= link_to 'Edit', edit_post_path(@post), class: "btn btn-default"
-			|  &nbsp &nbsp
-			= link_to 'Back', posts_path, class: "btn btn-default"
+.well
+	.container
+		.row
+			.col-md-12
+		  	h4 = @post.title.capitalize
+		  	br
+		 	.col-md-4
+		 		= image_tag(@post.picture.url, class: "img-rounded img-responsive")
+		 	.col-md-8  	 
+		  	= @post.description
+br
+
+= link_to 'Edit', edit_post_path(@post), class: "btn btn-default"
+|  &nbsp &nbsp
+= link_to 'Back', posts_path, class: "btn btn-default"
