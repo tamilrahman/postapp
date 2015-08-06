@@ -1,8 +1,11 @@
-h1 Editing post
-
-== render 'form'
-
-= link_to 'Show', @post
-'|
-= link_to 'Back', posts_path
+.row
+	.col-md-12
+		h2 Editing post
+	.container
+		.col-md-5
+			== render 'form'
+	.col-md-12
+		= link_to 'Show', @post, class: "btn btn-default"
+		| &nbsp &nbsp
+		= link_to 'Back', root_path, class: "btn btn-default"
 
