@@ -7,7 +7,12 @@
           | By 
           b = post.user.name.capitalize
         .panel-body
-          = post.description 
+          .container
+            .row
+              .col-md-4
+                = image_tag(post.picture.url, class: "img-rounded img-responsive")
+              .col-md-8
+                = post.description 
         - if post.user == current_user
           .panel-footer
             .btn-group.btn-group-justified aria-label="..." role="group" 

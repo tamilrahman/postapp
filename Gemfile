@@ -50,6 +50,10 @@ gem 'devise'
 # Use for pagination
 gem "will_paginate_mongoid"
 
+# Use file upload
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk', '~> 1.3.4'
+
 group :development, :test do
 	# handling the error
 	gem "better_errors"

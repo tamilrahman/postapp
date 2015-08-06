@@ -1,4 +1,4 @@
-= form_for @post, html: {class: "form-horizontal", role: "form"} do |f|
+= form_for @post, html: { multipart: true, role: "form"} do |f|
   - if @post.errors.any?
     #error_explanation
       h2 = "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
@@ -10,6 +10,10 @@
     label
       = f.label :title
     = f.text_field :title, class: "form-control"
+  .field.form-group
+    label
+      = f.label :picture
+    = f.file_field :picture
   .field.form-group
     label
       = f.label :description
