@@ -11,7 +11,7 @@
             .row
               .col-md-4
                 = image_tag(post.picture.url, class: "img-rounded img-responsive")
-              .col-md-8
+              .col-md-7
                 = post.description 
         - if post.user == current_user
           .panel-footer
