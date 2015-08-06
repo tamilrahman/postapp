@@ -47,6 +47,9 @@ gem "less-rails"
 # Use authentication and authorization
 gem 'devise'
 
+# Use for pagination
+gem "will_paginate_mongoid"
+
 group :development, :test do
 	# handling the error
 	gem "better_errors"

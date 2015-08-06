@@ -1,0 +1,17 @@
+.row
+  - @posts.each do |post|
+    .col-md-12
+      .panel.panel-default
+        .panel-heading 
+          h3 = post.title
+        .panel-body
+          = post.description 
+        - if post.user == current_user
+          .panel-footer
+            .btn-group.btn-group-justified aria-label="..." role="group" 
+              .btn-group role="group" 
+                = link_to 'Show', post, class: ".btn.btn-default", type: "button"
+              .btn-group role="group" 
+                = link_to 'Edit', edit_post_path(post), class: ".btn.btn-default", type: "button"
+              .btn-group role="group" 
+                = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete, class: ".btn.btn-default", type: "button"     

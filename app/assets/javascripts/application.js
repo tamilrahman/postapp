@@ -15,3 +15,10 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$("#posts-search input").keyup(function() {
+    $.get($("#posts-search").attr("action"), $("#posts-search").serialize(), null, "script");
+    return false;
+  });
+})
