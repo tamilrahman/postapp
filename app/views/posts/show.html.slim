@@ -1,12 +1,17 @@
 p#notice = notice
 
-p
-  strong Title:
-  = @post.title
-p
-  strong Description:
-  = @post.description
-
-= link_to 'Edit', edit_post_path(@post)
-'|
-= link_to 'Back', posts_path
+.row
+	.well
+		.col-md-12
+	  	strong Title:
+	  	br
+	 		= @post.title
+	 	.col-md-12
+	  	strong Description:
+	  	br
+	  	= @post.description
+	  	br
+	  	br
+			= link_to 'Edit', edit_post_path(@post), class: "btn btn-default"
+			|  &nbsp &nbsp
+			= link_to 'Back', posts_path, class: "btn btn-default"
