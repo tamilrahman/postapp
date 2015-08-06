@@ -5,7 +5,7 @@
       .form-group
         .row
           .col-md-3
-            = text_field_tag :search, params[:search], class: "form-control"
+            = text_field_tag :search, params[:search], placeholder: "Search by Title", class: "form-control"
           .col-md-2
             = submit_tag "Search", class: "btn btn-default"
 h2 Listing posts
